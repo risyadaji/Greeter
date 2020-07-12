@@ -1,0 +1,63 @@
+.announce-ctr {text-align: center}
+
+/* margin +*/
+.margin-0 {margin: 0 0 0 0}
+
+.martop-5 {margin-top: 5vh}
+.martop-10 {margin-top: 10vh}
+.martop-15 {margin-top: 15vh}
+.martop-20 {margin-top: 20vh}
+.martop-25 {margin-top: 25vh}
+.martop-30 {margin-top: 30vh}
+.martop-35 {margin-top: 35vh}
+.martop-40 {margin-top: 40vh}
+.martop-50 {margin-top: 50vh}
+.martop-75 {margin-top: 75vh}
+
+.marbot-5 {margin-bottom: 5vh}
+.marbot-10 {margin-bottom: 10vh}
+.marbot-15 {margin-bottom: 15vh}
+.marbot-20 {margin-bottom: 20vh}
+.marbot-25 {margin-bottom: 25vh}
+.marbot-30 {margin-bottom: 30vh}
+.marbot-35 {margin-bottom: 35vh}
+.marbot-40 {margin-bottom: 40vh}
+.marbot-50 {margin-bottom: 50vh}
+.marbot-75 {margin-bottom: 75vh}
+
+/* margin - */
+
+.martop-5-min {margin-top: -5vh}
+.martop-10-min {margin-top: -10vh}
+.martop-25-min {margin-top: -25vh}
+.martop-50-min {margin-top: -50vh}
+.martop-75-min {margin-top: -75vh}
+
+.marbot-10-min {margin-top: -10vh}
+.marbot-15-min {margin-top: -15vh}
+.marbot-25-min {margin-top: -25vh}
+.marbot-30-min {margin-top: -30vh}
+.marbot-35-min {margin-top: -35vh}
+.marbot-40-min {margin-top: -40vh}
+.marbot-50-min {margin-top: -50vh}
+.marbot-75-min {margin-top: -75vh}
+
+
+/* Font size */
+.fs-1vw {font-size: 1vw}
+.fs-1hvw {font-size: 1.5vw}
+.fs-2vw {font-size: 2vw}
+.fs-2hvw {font-size: 2.5vw}
+.fs-3vw {font-size: 3vw}
+.fs-3hvw {font-size: 3.5vw}
+.fs-3hvw {font-size: 3.5vw}
+.fs-4vw {font-size: 4vw}
+.fs-4hvw {font-size: 4.5vw}
+.fs-5vw {font-size: 4vw}
+.fs-5hvw {font-size: 4.5vw}
+.fs-xlarge {font-size: x-large}
+.fs-large {font-size: large}
+
+/* Font Color */
+.fc-grey{color: #A1A1A1}
+.fc-black{color: black}
