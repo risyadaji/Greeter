@@ -16,6 +16,8 @@ class Greeter extends React.Component {
       totalGuess: 0,
       nameToGreet: "",
       description: "",
+      dataArray: [],
+      promise: null
     };
   }
 
@@ -28,20 +30,37 @@ class Greeter extends React.Component {
     socket.on("newGuess", data => {
       console.log(data);
       const { name, totalGuess, description } = data;
+      const { promise } = this.state;
+      let closure = this;
 
-      this.setState({
-        nameToGreet: name,
-        totalGuess: totalGuess,
-        description: description
-      }, () => {
-        clearTimeout(resetTimer);
-        window.responsiveVoice.speak(`Selamat Datang, ${this.state.nameToGreet}`, "Indonesian Female", { rate: 0.85 });
+      function newPromise(){
+        return new Promise((resolve, reject) => {
+          closure.setState({
+            nameToGreet: name,
+            totalGuess: totalGuess,
+            description: description
+          }, () => {
+            clearTimeout(resetTimer);
+            window.responsiveVoice.speak(`Selamat Datang, ${closure.state.nameToGreet}`, "Indonesian Female", {rate: 0.85 , onend: resolve});
+    
+            resetTimer = setTimeout(() => {
+              closure.setState({ nameToGreet: "", description: "" })
+            }, 10000);
+          })
+        });
+      }
 
-        resetTimer = setTimeout(() => {
-          this.setState({ nameToGreet: "", description: "" })
-        }, 10000);
-      })
-    })
+      if (promise != null){
+        this.setState({
+          promise: promise.then(() => newPromise())
+        });
+      } else {
+        this.setState({
+          promise: newPromise()
+        });
+      }
+
+    });
 
     this.startClock();
   }
