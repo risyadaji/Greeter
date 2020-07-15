@@ -16,7 +16,6 @@ class Greeter extends React.Component {
       totalGuess: 0,
       nameToGreet: "",
       description: "",
-      dataArray: [],
       promise: null
     };
   }
